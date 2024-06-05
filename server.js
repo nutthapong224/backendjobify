@@ -29,10 +29,7 @@ cloudinary.config({
   api_key: process.env.CLOUD_API_KEY,
   api_secret: process.env.CLOUD_API_SECRET,
 });
-const corsOptions = {
-  origin: "https://client-topaz-seven.vercel.app/login",
-  optionsSuccessStatus: 200,
-};
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -42,7 +39,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
 app.use(mongoSanitize());
-app.use(cors(corsOptions));
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello World");
 }); 
