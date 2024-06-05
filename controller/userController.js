@@ -5,7 +5,7 @@ import User from "../models/UserModel.js";
 import Job from "../models/Jobmodel.js";
 import cloudinary from "cloudinary";
 
-import { formatImage } from "../middleware/Multermiddleware.js";
+import { formatImage } from "../middleware/multerssmidle.js";
 
 
 
