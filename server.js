@@ -39,12 +39,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
 app.use(mongoSanitize());
-app.use(
-  cors({
-    origin: "https://fontendjobify.vercel.app/", // Update with your Vercel app URL
-    methods: "GET,POST,PUT,DELETE,OPTIONS",
-  })
-);
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello World");
 }); 
