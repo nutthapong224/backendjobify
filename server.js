@@ -39,7 +39,13 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
 app.use(mongoSanitize());
-app.use(cors());
+app.use(
+  cors({
+    origin:
+      "https://fontendjobify-2xpz6d010-nutthapong-kannas-projects.vercel.app", // Update with your Vercel app URL
+    methods: "GET,POST,PUT,DELETE,OPTIONS",
+  })
+);
 app.get("/", (req, res) => {
   res.send("Hello World");
 }); 
