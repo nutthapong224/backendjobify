@@ -5,10 +5,9 @@ import User from "../models/UserModel.js";
 import Job from "../models/Jobmodel.js";
 import cloudinary from "cloudinary";
 
-import { formatImage } from "../middleware/multerMiddleware.js";
+import { formatImage } from "../middleware/Multermiddleware.js";
 
-import { promises as fs } from "fs";
-import { error } from "console";
+
 
 export const updateUser = async (req, res) => {
   const newUser = { ...req.body };
