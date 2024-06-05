@@ -30,7 +30,7 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 const corsOptions = {
-  origin: "https://client-1u8n.vercel.app/",
+  origin: "https://client-topaz-seven.vercel.app/login",
   optionsSuccessStatus: 200,
 };
 const __dirname = dirname(fileURLToPath(import.meta.url));
