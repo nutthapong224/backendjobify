@@ -41,8 +41,7 @@ app.use(helmet());
 app.use(mongoSanitize());
 app.use(
   cors({
-    origin:
-      "https://fontendjobify-2xpz6d010-nutthapong-kannas-projects.vercel.app", // Update with your Vercel app URL
+    origin: "https://fontendjobify.vercel.app/", // Update with your Vercel app URL
     methods: "GET,POST,PUT,DELETE,OPTIONS",
   })
 );
